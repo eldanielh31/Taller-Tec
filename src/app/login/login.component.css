@@ -1,0 +1,12 @@
+.login-div mat-card{
+    padding: 0;
+}
+
+.login-div mat-toolbar {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.login-form{
+    padding: 1em;
+}
