@@ -33,6 +33,8 @@
                 <input class="form-control" placeholder="Client name" type="text">
               </div>
             </div>
+
+
             <div class="form-group">
               <div class="input-group input-group-alternative mb-3">
                 <div class="input-group-prepend">
@@ -41,22 +43,35 @@
                 <input class="form-control" placeholder="Car plate" type="text">
               </div>
             </div>
-            <div class="form-group">
-              <div class="input-group input-group-alternative mb-3">
-                <div class="input-group-prepend">
-                  <span class="input-group-text"><i class="bi bi-telephone-fill"></i></span>
-                </div>
-                <input class="form-control" placeholder="Store" type="text">
+
+            <div class="input-group input-group-alternative mb-3">
+              <div class="input-group-btn">
+                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Store <span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Cartago</a></li>
+                  <li><a href="#">San Jose</a></li>
+                </ul>
+              </div><!-- /btn-group -->
+              <div class="input-group-prepend">
+                <span class="input-group-text"><i class="bi bi-telephone-fill"></i></span>
               </div>
-            </div>
-            <div class="form-group">
-              <div class="input-group input-group-alternative mb-3">
-                <div class="input-group-prepend">
-                  <span class="input-group-text"><i class="bi bi-person-badge-fill"></i></span>
-                </div>
-                <input class="form-control" placeholder="Service requiered" type="text">
-              </div>
-            </div>
+              <input class="form-control" type="text">
+          </div><!-- /input-group -->
+
+            <div class="input-group input-group-alternative mb-3">
+                  <div class="input-group-btn">
+                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Service <span class="caret"></span></button>
+                    <ul class="dropdown-menu">
+                      <li><a href="#">Checkup</a></li>
+                      <li><a href="#">Maintenance</a></li>
+                    </ul>
+                  </div><!-- /btn-group -->
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="bi bi-telephone-fill"></i></span>
+                  </div>
+                  <input class="form-control" type="text">
+              </div><!-- /input-group -->
+                
             <div class="text-center">
               <button type="button" class="btn btn-primary mt-4">Add appointment</button>
             </div>
