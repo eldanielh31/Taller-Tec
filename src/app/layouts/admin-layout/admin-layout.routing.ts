@@ -5,11 +5,12 @@ import { IconsComponent } from '../../pages/icons/icons.component';
 import { MapsComponent } from '../../pages/maps/maps.component';
 import { UserProfileComponent } from '../../pages/user-profile/user-profile.component';
 import { TablesComponent } from '../../pages/tables/tables.component';
+import { AuthGuardService } from 'src/app/auth/auth-guard.service';
 
 export const AdminLayoutRoutes: Routes = [
-    { path: 'dashboard',      component: DashboardComponent },
-    { path: 'user-profile',   component: UserProfileComponent },
-    { path: 'tables',         component: TablesComponent },
-    { path: 'icons',          component: IconsComponent },
-    { path: 'maps',           component: MapsComponent }
+    { path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuardService]},
+    { path: 'user-profile', component: UserProfileComponent, canActivate: [AuthGuardService] },
+    { path: 'tables', component: TablesComponent, canActivate: [AuthGuardService] },
+    { path: 'icons', component: IconsComponent, canActivate: [AuthGuardService] },
+    { path: 'maps', component: MapsComponent, canActivate: [AuthGuardService] }
 ];
