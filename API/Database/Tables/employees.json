@@ -1,0 +1,15 @@
+[
+  {
+    "idNumber": 654,
+    "name": "Daniel",
+    "lastName": "Z\u00FA\u00F1iga",
+    "secondLastName": "Barahona",
+    "cellphoneNumber": 85104014,
+    "age": 21,
+    "role": "engineer",
+    "email": "danyazunigab@gmail.com",
+    "location": "idk",
+    "username": "danyazunigab",
+    "password": "1234"
+  }
+]

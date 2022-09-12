@@ -229,11 +229,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\devWS\\Bases\\Tarea Corta 1\\API\\API.csproj",
+      "projectUniqueName": "C:\\devWS\\Bases\\Tarea Corta 1\\Taller-Tec\\API\\API.csproj",
       "projectName": "API",
-      "projectPath": "C:\\devWS\\Bases\\Tarea Corta 1\\API\\API.csproj",
+      "projectPath": "C:\\devWS\\Bases\\Tarea Corta 1\\Taller-Tec\\API\\API.csproj",
       "packagesPath": "C:\\Users\\danya\\.nuget\\packages\\",
-      "outputPath": "C:\\devWS\\Bases\\Tarea Corta 1\\API\\obj\\",
+      "outputPath": "C:\\devWS\\Bases\\Tarea Corta 1\\Taller-Tec\\API\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\danya\\AppData\\Roaming\\NuGet\\NuGet.Config"

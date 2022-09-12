@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "dY5hsuuhlmwQ5vADvoE/OTZkNOyvItVsNrxBd/f2LmX0fO9U2YHP5jT/kjHiZp5BlsaauWxd+yBa/G5FP4WAMg==",
+  "dgSpecHash": "lkxWbXicn/O4nOhPKGOw8H62xuiuRQFcoFf9M1fnRcvOg1P/PLepB1QZNmBAfwt45wBVMfkuIcsCwunLPpMJjw==",
   "success": true,
-  "projectFilePath": "C:\\devWS\\Bases\\Tarea Corta 1\\API\\API.csproj",
+  "projectFilePath": "C:\\devWS\\Bases\\Tarea Corta 1\\Taller-Tec\\API\\API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\danya\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
     "C:\\Users\\danya\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",

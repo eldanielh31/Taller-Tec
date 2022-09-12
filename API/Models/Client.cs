@@ -11,6 +11,18 @@ public class Client
     public string location{get; set;}
     public string username{get; set;}
     public string password{get; set;}
+    public Client()
+    {
+        this.idNumber = 0;
+        this.name = "";
+        this.lastName = "";
+        this.secondLastName = "";
+        this.cellphoneNumber = 0;
+        this.email = "";
+        this.location = "";
+        this.username = "";
+        this.password = "";
+    }
 
     public void setId(int newId)
     {

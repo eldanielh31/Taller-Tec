@@ -1,0 +1,28 @@
+[
+  {
+    "idNumber": 1198391424,
+    "name": null,
+    "lastName": null,
+    "secondLastName": null,
+    "cellphoneNumber": 0,
+    "age": 0,
+    "role": null,
+    "email": null,
+    "location": null,
+    "username": null,
+    "password": null
+  },
+  {
+    "idNumber": 772809737,
+    "name": null,
+    "lastName": null,
+    "secondLastName": null,
+    "cellphoneNumber": 0,
+    "age": 0,
+    "role": null,
+    "email": null,
+    "location": null,
+    "username": null,
+    "password": null
+  }
+]

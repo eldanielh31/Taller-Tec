@@ -20,13 +20,13 @@ public class ClientController : ControllerBase{
     [HttpGet]
     public IActionResult Get()
     {
-        return Ok(TallerDB.Instance.GetClients);
+        return Ok(TallerDB.GetInstance().GetClients);
     }
 
     [HttpGet("{id}")]
     public IActionResult Get(int id)
     {
-        var c = TallerDB.Instance.GetClient(id);
+        var c = TallerDB.GetInstance().GetClient(id);
         if(c != null)
         {
             return Ok(c);
@@ -38,8 +38,8 @@ public class ClientController : ControllerBase{
     public IActionResult Post()
     {
         Client c = new Client();
-        c.setId(TallerDB.Instance.GetClientsSize());
-        TallerDB.Instance.addClient(c);
+        c.setId(TallerDB.GetInstance().GetClientsSize());
+        TallerDB.GetInstance().addClient(c);
         return Ok();
     }
 
@@ -47,7 +47,7 @@ public class ClientController : ControllerBase{
     public IActionResult Post(int id, string name, string last,
         string secondLast, string email, string username, string password)
     {
-        if(TallerDB.Instance.FindClientById(id) != null)
+        if(TallerDB.GetInstance().FindClientById(id) != null)
         {
             return NotFound();
         }
@@ -59,8 +59,20 @@ public class ClientController : ControllerBase{
         c.setEmail(email);
         c.setUser(username);
         c.setPassword(password);
-        TallerDB.Instance.addClient(c);
+        TallerDB.GetInstance().addClient(c);
         return Ok();
+    }
+
+    [HttpDelete("{id}")]
+    public IActionResult Delete(int id)
+    {
+        var c = TallerDB.GetInstance().FindClientById(id);
+        if(c != null)
+        {
+            TallerDB.GetInstance().DeleteClient(id);
+            return Ok();
+        }
+        return NotFound();
     }
 
 }

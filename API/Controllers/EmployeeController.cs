@@ -1,8 +1,4 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions;
 using API.Models;
 using API.Database;
 
@@ -22,49 +18,54 @@ public class EmployeeController : ControllerBase{
 
     //GET api
     [HttpGet]
-    public IActionResult Get()
+    public ActionResult Get()
     {
-        return Ok(TallerDB.Instance.GetEmployees);
+        Employee[] e = TallerDB.GetInstance().GetEmployees();
+        if(e != null)
+            return Ok(e);
+        return NotFound();
     }
 
-    [HttpGet("{id}")]
-    public IActionResult Get(int id)
+    [HttpGet("{email}")]
+    public ActionResult Get(string email)
     {
-        var e = TallerDB.Instance.GetEmployee(id);
+        var e = TallerDB.GetInstance().GetEmployee(email);
         if(e != null)
         {
-            return Ok(TallerDB.Instance.GetEmployee(id));
+            return Ok(TallerDB.GetInstance().GetEmployee(email));
         }
         return NotFound();
     }
 
     [HttpPost]
-    public IActionResult Post()
+    public ActionResult Post()
     {
         Employee e = new Employee();
-        e.setId(TallerDB.Instance.GetEmployeesSize());
-        TallerDB.Instance.addEmployee(e);
+        e.setId(new Random().Next());
+        TallerDB.GetInstance().addEmployee(e);
         return Ok();
     }
 
-    [HttpPost("{id}/{name}/{last}/{secondLast}/{role}/{username}/{password}")]
-    public IActionResult Post(int id,string name, string last,
-        string secondLast, string role, string username, string password)
+    [HttpPost("newEmployee")]
+    public ActionResult Post([FromBody] Employee e)
     {
-        if(TallerDB.Instance.FindEmployeeById(id) != null)
+        if(TallerDB.GetInstance().FindEmployeeById(e.idNumber) != null)
         {
             return NoContent();
         }
-        Employee e = new Employee();
-        e.setId(id);
-        e.setName(name);
-        e.setLastName(last);
-        e.setSLastName(secondLast);
-        e.setRole(role);
-        e.setUser(username);
-        e.setPassword(password);
-        TallerDB.Instance.addEmployee(e);
-        return Ok();
+        TallerDB.GetInstance().addEmployee(e);
+        return Ok(e);
     }
-
+    
+    [HttpDelete("{id}")]
+    public ActionResult Delete(int id)
+    {
+        var e = TallerDB.GetInstance().FindEmployeeById(id);
+        if(e != null)
+        {
+            TallerDB.GetInstance().DeleteEmployee(id);
+            return Ok();
+        }
+        return NotFound();
+    }
 }
