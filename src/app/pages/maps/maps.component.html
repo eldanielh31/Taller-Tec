@@ -45,32 +45,27 @@
             </div>
 
             <div class="input-group input-group-alternative mb-3">
-              <div class="input-group-btn">
-                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Store <span class="caret"></span></button>
-                <ul class="dropdown-menu">
-                  <li><a href="#">Cartago</a></li>
-                  <li><a href="#">San Jose</a></li>
-                </ul>
-              </div><!-- /btn-group -->
               <div class="input-group-prepend">
-                <span class="input-group-text"><i class="bi bi-telephone-fill"></i></span>
+                <label class="input-group-text" for="inputGroupSelect01">Store</label>
               </div>
-              <input class="form-control" type="text">
-          </div><!-- /input-group -->
+              <select class="custom-select" id="inputGroupSelect01">
+                <option value="1">San Jose</option>
+                <option value="2">Cartago</option>
+                <option value="3">Heredia</option>
+                <option value="4">Alajuela</option>
+              </select>
+            </div>
 
+            
             <div class="input-group input-group-alternative mb-3">
-                  <div class="input-group-btn">
-                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Service <span class="caret"></span></button>
-                    <ul class="dropdown-menu">
-                      <li><a href="#">Checkup</a></li>
-                      <li><a href="#">Maintenance</a></li>
-                    </ul>
-                  </div><!-- /btn-group -->
-                  <div class="input-group-prepend">
-                    <span class="input-group-text"><i class="bi bi-telephone-fill"></i></span>
-                  </div>
-                  <input class="form-control" type="text">
-              </div><!-- /input-group -->
+              <div class="input-group-prepend">
+                <label class="input-group-text" for="inputGroupSelect01">Service</label>
+              </div>
+              <select class="custom-select" id="inputGroupSelect02">
+                <option value="1">Checkup</option>
+                <option value="2">Maintenance</option>
+              </select>
+            </div>
                 
             <div class="text-center">
               <button type="button" class="btn btn-primary mt-4">Add appointment</button>
