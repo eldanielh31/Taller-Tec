@@ -20,8 +20,18 @@ export class LoginComponent implements OnInit, OnDestroy {
   }
 
   handleLogin(){
-    this.localStorage.saveData('user', this.email)
-    this.localStorage.saveData('password', this.password)
+    this.localStorage.saveData('user', JSON.stringify(
+      { 
+      'email': this.email, 
+      'password': this.password,
+      'name': 'Daniel',
+      'age': 23,
+      'address' : 'Cartago',
+      'phone' : '62686940',
+      'identification' : '305180081',
+      'role' : 'Enginner',
+      }
+      ))
 
     this.router.navigate(['/dashboard'])
   }

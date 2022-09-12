@@ -7,7 +7,7 @@ declare const google: any;
   styleUrls: ['./maps.component.scss']
 })
 export class MapsComponent implements OnInit {
-
+  
   constructor() { }
 
   ngOnInit() {
