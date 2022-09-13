@@ -32,8 +32,22 @@ export class UserProfileComponent implements OnInit {
   }
 
   handleUpdate(){
-    console.log(this.identification, this.password, this.firstName, this.lastName,
-      this.dateBirth, this.dateEntered, this.role, this.address, this.phone, this.email)
+
+    let listData = ['identification', 'password', 'firstName', 'lastName',
+      'dateBirth', 'dateEntered', 'role', 'address', 'phone', 'email']
+    let dataToUpdate = [this.identification ,this.password, this.firstName, this.lastName,
+      this.dateBirth, this.dateEntered, this.role, this.address, this.phone, this.email]
+    
+    let con = 0;
+    dataToUpdate.forEach(element => {
+      if (element !== null || element !== ''){
+        this.currentUser[listData[con]] = element
+      }
+    });
+
+    this.localStorage.saveData('user', JSON.stringify(this.currentUser))
+    window.location.reload()
+
   }
 
 }

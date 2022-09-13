@@ -14,6 +14,7 @@ export class LoginComponent implements OnInit, OnDestroy {
 
   email: string = ''
   password: string = ''
+  isError: boolean = false
 
   ngOnInit() {
   }
@@ -21,26 +22,35 @@ export class LoginComponent implements OnInit, OnDestroy {
   }
 
   handleLogin() {
-    // this.localStorage.saveData('user', JSON.stringify(
-    //   { 
-    //   'email': this.email, 
-    //   'password': this.password,
-    //   'name': 'Daniel',
-    //   'age': 23,
-    //   'address' : 'Cartago',
-    //   'phone' : '62686940',
-    //   'identification' : '305180081',
-    //   'role' : 'Enginner',
-    //   }
-    //   ))
-
     this.backend.getEmploye(this.email).subscribe(
-      (ret: any[]) => {
-        console.log(ret);
-      }
+      (data : Object) => {
+        data['admin'] = true;
+        console.log(data);
+        
+        this.localStorage.saveData('user', JSON.stringify(data))
+        this.router.navigate(['/dashboard'])
+        return
+      }, (error => {
+        console.log(error['status'])
+      })
+    )
+    this.backend.getClient(this.email).subscribe(
+      (data: Object) => {
+        data['admin'] = false;
+        console.log(data);
+        
+        this.localStorage.saveData('user', JSON.stringify(data))
+        this.router.navigate(['/dashboard'])
+        return
+      }, (error => {
+        console.log(error['status'])
+      })
+
     )
 
-    // this.router.navigate(['/dashboard'])
+    this.isError = true
+    
+    return
   }
 
 
