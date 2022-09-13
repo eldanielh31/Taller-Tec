@@ -23,7 +23,7 @@ public class AppointmentController : ControllerBase{
 
     //GET api
     [HttpGet]
-    [EnableCors("allowAll")]
+    [EnableCors]
     public ActionResult Get()
     {
         Appointment[] a = TallerDB.GetInstance().GetAppointments();
@@ -33,7 +33,7 @@ public class AppointmentController : ControllerBase{
     }
 
     [HttpGet("{searchBy}/{id}")]
-    [EnableCors("allowAll")]
+    [EnableCors]
     public ActionResult Get(string searchBy, int id)
     {
         var a = TallerDB.GetInstance().GetAppointment(searchBy,id);
@@ -43,7 +43,7 @@ public class AppointmentController : ControllerBase{
     }
 
     [HttpPost("new")]
-    [EnableCors("allowAll")]
+    [EnableCors]
     public ActionResult Post([FromBody] Appointment newAppointment)
     {
         newAppointment.setId(TallerDB.GetInstance().GetAppointmentsSize());
@@ -52,7 +52,7 @@ public class AppointmentController : ControllerBase{
     }
     
     [HttpDelete("id/{id}")]
-    [EnableCors("allowAll")]
+    [EnableCors]
     public ActionResult Delete(int id)
     {
         var a = TallerDB.GetInstance().FindAppointmentById(id);
