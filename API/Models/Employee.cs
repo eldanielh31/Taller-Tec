@@ -2,30 +2,32 @@ namespace API.Models;
 public class Employee
 {
     public int idNumber{get; set;}
+    public int identification{get; set;}
     public string name{get; set;}
     public string lastName{get; set;}
-    public string secondLastName{get; set;}
     public int cellphoneNumber{get; set;}
     //public DateTime joiningDate {get; set;}
     //public DateTime birthDate {get; set;}
     public int age{get; set;}
     public string role{get; set;}
+    public string branch{get; set;}
     public string email{get; set;}
-    public string location{get; set;}
+    public string address{get; set;}
     public string username{get; set;}
     public string password{get; set;}
 
     public Employee()
     {
         this.idNumber = 0;
+        this.identification = 0;
         this.name = "";
         this.lastName = "";
-        this.secondLastName = "";
         this.cellphoneNumber = 0;
         this.age = 0;
         this.role = "";
+        this.branch = "";
         this.email = "";
-        this.location = "";
+        this.address = "";
         this.username = "";
         this.password = "";
     }
@@ -42,9 +44,9 @@ public class Employee
     {
         this.lastName = newLast;
     }
-    public void setSLastName(string newSecond)
+    public void setBranch(string newBranch)
     {
-        this.secondLastName = newSecond;
+        this.branch = newBranch;
     }
     public void setRole(string newRole)
     {
@@ -54,9 +56,9 @@ public class Employee
     {
         this.email = newEmail;
     }
-    public void setLocation(string newLocation)
+    public void setAddress(string newAddress)
     {
-        this.location = newLocation;
+        this.address = newAddress;
     }
     public void setUser(string newUser)
     {
