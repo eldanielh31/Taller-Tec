@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Cors;
 using API.Models;
 using API.Database;
 
@@ -18,6 +19,7 @@ public class ClientController : ControllerBase{
 
     //GET api
     [HttpGet]
+    [EnableCors("allowAll")]
     public ActionResult Get()
     {
         Client[] c = TallerDB.GetInstance().GetClients();
@@ -27,6 +29,7 @@ public class ClientController : ControllerBase{
     }
 
     [HttpGet("id/{id}")]
+    [EnableCors("allowAll")]
     public ActionResult Get(int id)
     {
         var c = TallerDB.GetInstance().GetClient(id);
@@ -35,6 +38,7 @@ public class ClientController : ControllerBase{
         return NotFound();
     }
     [HttpGet("email/{email}")]
+    [EnableCors("allowAll")]
     public ActionResult Get(string email)
     {
         var c = TallerDB.GetInstance().GetClient(email);
@@ -44,6 +48,7 @@ public class ClientController : ControllerBase{
     }
 
     [HttpPost]
+    [EnableCors("allowAll")]
     public ActionResult Post()
     {
         Client c = new Client();
@@ -53,6 +58,7 @@ public class ClientController : ControllerBase{
     }
 
     [HttpPost("new")]
+    [EnableCors("allowAll")]
     public ActionResult Post([FromBody] Client c)
     {
         if(TallerDB.GetInstance().FindClientById(c.idNumber) != null)
@@ -62,6 +68,7 @@ public class ClientController : ControllerBase{
     }
 
     [HttpDelete("{id}")]
+    [EnableCors("allowAll")]
     public ActionResult Delete(int id)
     {
         var c = TallerDB.GetInstance().FindClientById(id);

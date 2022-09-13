@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.Extensions;
 using API.Models;
 using API.Database;
@@ -22,6 +23,7 @@ public class AppointmentController : ControllerBase{
 
     //GET api
     [HttpGet]
+    [EnableCors("allowAll")]
     public ActionResult Get()
     {
         Appointment[] a = TallerDB.GetInstance().GetAppointments();
@@ -31,6 +33,7 @@ public class AppointmentController : ControllerBase{
     }
 
     [HttpGet("{searchBy}/{id}")]
+    [EnableCors("allowAll")]
     public ActionResult Get(string searchBy, int id)
     {
         var a = TallerDB.GetInstance().GetAppointment(searchBy,id);
@@ -40,6 +43,7 @@ public class AppointmentController : ControllerBase{
     }
 
     [HttpPost("new")]
+    [EnableCors("allowAll")]
     public ActionResult Post([FromBody] Appointment newAppointment)
     {
         newAppointment.setId(TallerDB.GetInstance().GetAppointmentsSize());
@@ -48,6 +52,7 @@ public class AppointmentController : ControllerBase{
     }
     
     [HttpDelete("id/{id}")]
+    [EnableCors("allowAll")]
     public ActionResult Delete(int id)
     {
         var a = TallerDB.GetInstance().FindAppointmentById(id);
