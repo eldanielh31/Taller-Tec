@@ -18,53 +18,51 @@ public class ClientController : ControllerBase{
 
     //GET api
     [HttpGet]
-    public IActionResult Get()
+    public ActionResult Get()
     {
-        return Ok(TallerDB.GetInstance().GetClients);
+        Client[] c = TallerDB.GetInstance().GetClients();
+        if(c != null)
+            return Ok(c);
+        return NotFound();
     }
 
-    [HttpGet("{id}")]
-    public IActionResult Get(int id)
+    [HttpGet("id/{id}")]
+    public ActionResult Get(int id)
     {
         var c = TallerDB.GetInstance().GetClient(id);
         if(c != null)
-        {
             return Ok(c);
-        }
+        return NotFound();
+    }
+    [HttpGet("email/{email}")]
+    public ActionResult Get(string email)
+    {
+        var c = TallerDB.GetInstance().GetClient(email);
+        if(c != null)
+            return Ok(c);
         return NotFound();
     }
 
     [HttpPost]
-    public IActionResult Post()
+    public ActionResult Post()
     {
         Client c = new Client();
-        c.setId(TallerDB.GetInstance().GetClientsSize());
+        c.setId(new Random().Next());
         TallerDB.GetInstance().addClient(c);
         return Ok();
     }
 
-    [HttpPost("{id}/{name}/{last}/{secondLast}/{email}/{username}/{password}")]
-    public IActionResult Post(int id, string name, string last,
-        string secondLast, string email, string username, string password)
+    [HttpPost("new")]
+    public ActionResult Post([FromBody] Client c)
     {
-        if(TallerDB.GetInstance().FindClientById(id) != null)
-        {
-            return NotFound();
-        }
-        Client c = new Client();
-        c.setId(id);
-        c.setName(name);
-        c.setLastName(last);
-        c.setSLastName(secondLast);
-        c.setEmail(email);
-        c.setUser(username);
-        c.setPassword(password);
+        if(TallerDB.GetInstance().FindClientById(c.idNumber) != null)
+            return BadRequest();
         TallerDB.GetInstance().addClient(c);
         return Ok();
     }
 
     [HttpDelete("{id}")]
-    public IActionResult Delete(int id)
+    public ActionResult Delete(int id)
     {
         var c = TallerDB.GetInstance().FindClientById(id);
         if(c != null)

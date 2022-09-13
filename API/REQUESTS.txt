@@ -1,0 +1,61 @@
+---------------------------------------------
+|                                           |
+|  Comando para iniciar el API: dotnet run  |
+|                                           |
+---------------------------------------------
+
+Gestión de empleados
+
+http://localhost:5022/employees
+
+    GET (sin body) -> Retorna array de empleados
+    POST (sin body) -> Crea un empleado con valores default y ID aleatorio
+
+http://localhost:5022/employees/new
+
+    POST (con body como un objeto JSON de empleado) -> Añade el empleado JSON al array
+
+http://localhost:5022/employees/id/{id}
+
+    GET (sin body) -> Retorna el empleado con el id indicado
+    DELETE (sin body) -> Borra el empleado con el id correspondiente
+
+http://localhost:5022/employees/email/{email}
+
+    GET (sin body) -> Retorna el empleado con el email correspondiente
+
+
+Gestión de clientes
+
+http://localhost:5022/clients
+
+    GET (sin body) -> Retorna array de clientes
+    POST (sin body) -> Crea un cliente con valores default y ID aleatorio
+
+http://localhost:5022/clients/new
+
+    POST (con body como un objeto JSON de cliente) -> Añade el cliente JSON al array
+
+http://localhost:5022/clients/id/{id}
+    
+    GET (sin body) -> Retorna el cliente con el id indicado
+    DELETE (sin body) -> Borra el cliente con el id correspondiente
+
+http://localhost:5022/clients/email/{email}
+    
+    GET (sin body) -> Retorna el cliente con el email correspondiente
+
+
+Gestión de citas
+
+http://localhost:5022/appointments
+    
+    GET (sin body) -> Retorna array de citas
+
+http://localhost:5022/appointments/{searchBy}/{id} 
+
+    GET (searchBy puede ser employee, client o appointment) -> Retorna las citas que correspondan con el id ingresado
+
+http://localhost:5022/appointments/id/{id} 
+    
+    DELETE -> Borra la cita que corresponde al id ingresado

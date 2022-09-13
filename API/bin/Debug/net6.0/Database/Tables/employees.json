@@ -1,28 +1,28 @@
 [
   {
-    "idNumber": 1198391424,
-    "name": null,
-    "lastName": null,
-    "secondLastName": null,
-    "cellphoneNumber": 0,
-    "age": 0,
-    "role": null,
-    "email": null,
-    "location": null,
-    "username": null,
-    "password": null
+    "idNumber": 654,
+    "name": "Daniel",
+    "lastName": "Z\u00FA\u00F1iga",
+    "secondLastName": "Barahona",
+    "cellphoneNumber": 85104014,
+    "age": 21,
+    "role": "engineer",
+    "email": "danyazunigab@gmail.com",
+    "location": "idk",
+    "username": "danyazunigab",
+    "password": "1234"
   },
   {
-    "idNumber": 772809737,
-    "name": null,
-    "lastName": null,
-    "secondLastName": null,
+    "idNumber": 35809779,
+    "name": "",
+    "lastName": "",
+    "secondLastName": "",
     "cellphoneNumber": 0,
     "age": 0,
-    "role": null,
-    "email": null,
-    "location": null,
-    "username": null,
-    "password": null
+    "role": "",
+    "email": "",
+    "location": "",
+    "username": "",
+    "password": ""
   }
 ]

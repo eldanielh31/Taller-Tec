@@ -21,16 +21,18 @@ namespace API.Database{
         //Constructor
         private TallerDB()
         {
+            updateArrays();
+        }
+
+        private void updateArrays()
+        {
             this.employees = JSONManager.ReadJSON<Employee[]>(employeeTable);
-            //this.employees = new List<Employee>();
             this.employeesSize = this.employees.Length;
             
             this.clients = JSONManager.ReadJSON<Client[]>(clientTable);
-            //this.clients = new List<Client>();
             this.clientsSize = this.clients.Length;
             
             this.apps = JSONManager.ReadJSON<Appointment[]>(appointmentTable);
-            //this.apps = new List<Appointment>();
             this.appsSize = this.apps.Length;
         }
         //Singleton instance
@@ -52,18 +54,17 @@ namespace API.Database{
             //this.employees.Add(newEmployee);
             //this.employeesSize += 1;
             JSONManager.AddToJSON<Employee>(newEmployee,employeeTable);
+            updateArrays();
         }
         public void addClient(Client newClient)
         {
-            //this.clients.Add(newClient);
-            //this.clientsSize += 1;
             JSONManager.AddToJSON<Client>(newClient,clientTable);
+            updateArrays();
         }
         public void addAppointment(Appointment newApp)
         {
-            //this.apps.Add(newApp);
-            //this.appsSize += 1;
             JSONManager.AddToJSON<Appointment>(newApp,appointmentTable);
+            updateArrays();
         }
         
         //Getters (singular)
@@ -87,11 +88,11 @@ namespace API.Database{
         {
             switch(type)
             {
-                case ("i"):
+                case ("a" or "appointment"):
                     return apps.FirstOrDefault(c => c.idAppointment.Equals(id));
-                case ("e"):
+                case ("e" or "employee"):
                     return apps.FirstOrDefault(c => c.idEmployee.Equals(id));
-                case ("c"):
+                case ("c" or "client"):
                     return apps.FirstOrDefault(c => c.idClient.Equals(id));
             }
             return null;
@@ -131,18 +132,21 @@ namespace API.Database{
             Employee[] newEmployeeList = employees.Where(e => e.idNumber != id).ToArray();
             this.employees = newEmployeeList;
             JSONManager.OverrideJSON<Employee>(newEmployeeList,employeeTable);
+            updateArrays();
         }
         public void DeleteClient(int id)
         {
             Client[] newClientList = clients.Where(c => c.idNumber != id).ToArray();
             this.clients = newClientList;
             JSONManager.OverrideJSON<Client>(newClientList,clientTable);
+            updateArrays();
         }
         public void DeleteAppointment(int id)
         {
             Appointment[] newAppList = apps.Where(a => a.idAppointment != id).ToArray();
             this.apps = newAppList;
             JSONManager.OverrideJSON<Appointment>(newAppList,appointmentTable);
+            updateArrays();
         }
 
         //Size getters

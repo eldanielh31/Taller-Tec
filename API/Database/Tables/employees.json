@@ -11,5 +11,31 @@
     "location": "idk",
     "username": "danyazunigab",
     "password": "1234"
+  },
+  {
+    "idNumber": 35809779,
+    "name": "",
+    "lastName": "",
+    "secondLastName": "",
+    "cellphoneNumber": 0,
+    "age": 0,
+    "role": "",
+    "email": "",
+    "location": "",
+    "username": "",
+    "password": ""
+  },
+  {
+    "idNumber": 1571365711,
+    "name": "",
+    "lastName": "",
+    "secondLastName": "",
+    "cellphoneNumber": 0,
+    "age": 0,
+    "role": "",
+    "email": "",
+    "location": "",
+    "username": "",
+    "password": ""
   }
 ]

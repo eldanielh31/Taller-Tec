@@ -26,14 +26,21 @@ public class EmployeeController : ControllerBase{
         return NotFound();
     }
 
-    [HttpGet("{email}")]
+    [HttpGet("email/{email}")]
     public ActionResult Get(string email)
     {
         var e = TallerDB.GetInstance().GetEmployee(email);
         if(e != null)
-        {
             return Ok(TallerDB.GetInstance().GetEmployee(email));
-        }
+        return NotFound();
+    }
+
+    [HttpGet("id/{id}")]
+    public ActionResult Get(int id)
+    {
+        var e = TallerDB.GetInstance().GetEmployee(id);
+        if(e != null)
+            return Ok(TallerDB.GetInstance().GetEmployee(id));
         return NotFound();
     }
 
@@ -46,18 +53,16 @@ public class EmployeeController : ControllerBase{
         return Ok();
     }
 
-    [HttpPost("newEmployee")]
+    [HttpPost("new")]
     public ActionResult Post([FromBody] Employee e)
     {
         if(TallerDB.GetInstance().FindEmployeeById(e.idNumber) != null)
-        {
             return NoContent();
-        }
         TallerDB.GetInstance().addEmployee(e);
         return Ok(e);
     }
     
-    [HttpDelete("{id}")]
+    [HttpDelete("id/{id}")]
     public ActionResult Delete(int id)
     {
         var e = TallerDB.GetInstance().FindEmployeeById(id);

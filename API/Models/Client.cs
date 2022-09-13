@@ -2,7 +2,7 @@ namespace API.Models;
 
 public class Client
 {
-    public long idNumber{get; set;}
+    public int idNumber{get; set;}
     public string name{get; set;}
     public string lastName{get; set;}
     public string secondLastName{get; set;}

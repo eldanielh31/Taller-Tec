@@ -22,32 +22,33 @@ public class AppointmentController : ControllerBase{
 
     //GET api
     [HttpGet]
-    public IActionResult Get()
+    public ActionResult Get()
     {
-        return Ok(TallerDB.GetInstance().GetAppointments);
-    }
-
-    [HttpGet("{idType}/{id}")]
-    public IActionResult Get(string idType, int id)
-    {
-        var a = TallerDB.GetInstance().GetAppointment(idType,id);
+        Appointment[] a = TallerDB.GetInstance().GetAppointments();
         if(a != null)
-        {
             return Ok(a);
-        }
         return NotFound();
     }
 
-    [HttpPost]
-    public IActionResult Post([FromBody] Appointment newAppointment)
+    [HttpGet("{searchBy}/{id}")]
+    public ActionResult Get(string searchBy, int id)
+    {
+        var a = TallerDB.GetInstance().GetAppointment(searchBy,id);
+        if(a != null)
+            return Ok(a);
+        return NotFound();
+    }
+
+    [HttpPost("new")]
+    public ActionResult Post([FromBody] Appointment newAppointment)
     {
         newAppointment.setId(TallerDB.GetInstance().GetAppointmentsSize());
         TallerDB.GetInstance().addAppointment(newAppointment);
         return Ok();
     }
     
-    [HttpDelete("{id}")]
-    public IActionResult Delete(int id)
+    [HttpDelete("id/{id}")]
+    public ActionResult Delete(int id)
     {
         var a = TallerDB.GetInstance().FindAppointmentById(id);
         if(a != null)
