@@ -55,3 +55,33 @@ C:\devWS\Bases\Tarea Corta 1\Taller-Tec\API\obj\Debug\net6.0\ref\API.dll
 C:\devWS\Bases\Tarea Corta 1\Taller-Tec\API\bin\Debug\net6.0\Database\Tables\appointments.json
 C:\devWS\Bases\Tarea Corta 1\Taller-Tec\API\bin\Debug\net6.0\Database\Tables\clients.json
 C:\devWS\Bases\Tarea Corta 1\Taller-Tec\API\bin\Debug\net6.0\Database\Tables\employees.json
+C:\Users\danbg\Desktop\tallertec\Taller-Tec\API\bin\Debug\net6.0\appsettings.Development.json
+C:\Users\danbg\Desktop\tallertec\Taller-Tec\API\bin\Debug\net6.0\appsettings.json
+C:\Users\danbg\Desktop\tallertec\Taller-Tec\API\bin\Debug\net6.0\Database\Tables\appointments.json
+C:\Users\danbg\Desktop\tallertec\Taller-Tec\API\bin\Debug\net6.0\Database\Tables\clients.json
+C:\Users\danbg\Desktop\tallertec\Taller-Tec\API\bin\Debug\net6.0\Database\Tables\employees.json
+C:\Users\danbg\Desktop\tallertec\Taller-Tec\API\bin\Debug\net6.0\API.exe
+C:\Users\danbg\Desktop\tallertec\Taller-Tec\API\bin\Debug\net6.0\API.deps.json
+C:\Users\danbg\Desktop\tallertec\Taller-Tec\API\bin\Debug\net6.0\API.runtimeconfig.json
+C:\Users\danbg\Desktop\tallertec\Taller-Tec\API\bin\Debug\net6.0\API.dll
+C:\Users\danbg\Desktop\tallertec\Taller-Tec\API\bin\Debug\net6.0\API.pdb
+C:\Users\danbg\Desktop\tallertec\Taller-Tec\API\bin\Debug\net6.0\Microsoft.OpenApi.dll
+C:\Users\danbg\Desktop\tallertec\Taller-Tec\API\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\danbg\Desktop\tallertec\Taller-Tec\API\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\danbg\Desktop\tallertec\Taller-Tec\API\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\danbg\Desktop\tallertec\Taller-Tec\API\obj\Debug\net6.0\API.csproj.AssemblyReference.cache
+C:\Users\danbg\Desktop\tallertec\Taller-Tec\API\obj\Debug\net6.0\API.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\danbg\Desktop\tallertec\Taller-Tec\API\obj\Debug\net6.0\API.AssemblyInfoInputs.cache
+C:\Users\danbg\Desktop\tallertec\Taller-Tec\API\obj\Debug\net6.0\API.AssemblyInfo.cs
+C:\Users\danbg\Desktop\tallertec\Taller-Tec\API\obj\Debug\net6.0\API.csproj.CoreCompileInputs.cache
+C:\Users\danbg\Desktop\tallertec\Taller-Tec\API\obj\Debug\net6.0\API.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\danbg\Desktop\tallertec\Taller-Tec\API\obj\Debug\net6.0\API.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\danbg\Desktop\tallertec\Taller-Tec\API\obj\Debug\net6.0\staticwebassets.build.json
+C:\Users\danbg\Desktop\tallertec\Taller-Tec\API\obj\Debug\net6.0\staticwebassets.development.json
+C:\Users\danbg\Desktop\tallertec\Taller-Tec\API\obj\Debug\net6.0\scopedcss\bundle\API.styles.css
+C:\Users\danbg\Desktop\tallertec\Taller-Tec\API\obj\Debug\net6.0\API.csproj.CopyComplete
+C:\Users\danbg\Desktop\tallertec\Taller-Tec\API\obj\Debug\net6.0\API.dll
+C:\Users\danbg\Desktop\tallertec\Taller-Tec\API\obj\Debug\net6.0\refint\API.dll
+C:\Users\danbg\Desktop\tallertec\Taller-Tec\API\obj\Debug\net6.0\API.pdb
+C:\Users\danbg\Desktop\tallertec\Taller-Tec\API\obj\Debug\net6.0\API.genruntimeconfig.cache
+C:\Users\danbg\Desktop\tallertec\Taller-Tec\API\obj\Debug\net6.0\ref\API.dll

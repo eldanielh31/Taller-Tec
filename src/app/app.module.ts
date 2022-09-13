@@ -27,6 +27,8 @@ import { BrowserModule } from '@angular/platform-browser';
     NgbModule,
     RouterModule,
     AppRoutingModule,
+    HttpClientModule
+
   ],
   declarations: [
     AppComponent,
