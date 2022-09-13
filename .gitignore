@@ -5,6 +5,7 @@
 /tmp
 /out-tsc
 /.angular
+/.bin
 
 # dependencies
 /node_modules
