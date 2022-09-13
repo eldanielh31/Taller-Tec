@@ -19,7 +19,7 @@ public class EmployeeController : ControllerBase{
 
     //GET api
     [HttpGet]
-    [EnableCors("allowAll")]
+    [EnableCors]
     public ActionResult Get()
     {
         Employee[] e = TallerDB.GetInstance().GetEmployees();
@@ -29,7 +29,7 @@ public class EmployeeController : ControllerBase{
     }
 
     [HttpGet("email/{email}")]
-    [EnableCors("allowAll")]
+    [EnableCors]
     public ActionResult Get(string email)
     {
         var e = TallerDB.GetInstance().GetEmployee(email);
@@ -39,7 +39,7 @@ public class EmployeeController : ControllerBase{
     }
 
     [HttpGet("id/{id}")]
-    [EnableCors("allowAll")]
+    [EnableCors]
     public ActionResult Get(int id)
     {
         var e = TallerDB.GetInstance().GetEmployee(id);
@@ -49,7 +49,7 @@ public class EmployeeController : ControllerBase{
     }
 
     [HttpPost]
-    [EnableCors("allowAll")]
+    [EnableCors]
     public ActionResult Post()
     {
         Employee e = new Employee();
@@ -59,7 +59,7 @@ public class EmployeeController : ControllerBase{
     }
 
     [HttpPost("new")]
-    [EnableCors("allowAll")]
+    [EnableCors]
     public ActionResult Post([FromBody] Employee e)
     {
         if(TallerDB.GetInstance().FindEmployeeById(e.idNumber) != null)
@@ -69,7 +69,7 @@ public class EmployeeController : ControllerBase{
     }
     
     [HttpDelete("id/{id}")]
-    [EnableCors("allowAll")]
+    [EnableCors]
     public ActionResult Delete(int id)
     {
         var e = TallerDB.GetInstance().FindEmployeeById(id);
