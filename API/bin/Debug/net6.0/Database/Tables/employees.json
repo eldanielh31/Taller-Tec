@@ -1,17 +1,28 @@
 [
   {
     "idNumber": 2019043724,
+<<<<<<< HEAD
     "identification": 117970894,
+=======
+    "identification":117970894,
+>>>>>>> 08225314eae312a1aeabd106fea67440a3b32b46
     "name": "Daniel",
     "lastName": "Z\u00FA\u00F1iga",
     "cellphoneNumber": 85104014,
+    "joiningDate":"2020-2-5T00:00:00",
+    "birthDate":"2000-12-15T00:00:00",
     "age": 21,
+<<<<<<< HEAD
     "role": "Engineer",
+=======
+    "role": "engineer",
+>>>>>>> 08225314eae312a1aeabd106fea67440a3b32b46
     "branch": "Campus Central Cartago",
     "email": "danyazunigab@gmail.com",
     "address": "idk",
     "username": "danyazunigab",
     "password": "1234"
+<<<<<<< HEAD
   },
   {
     "idNumber": 2345,
@@ -26,5 +37,7 @@
     "address": "idk",
     "username": "danyazunigab",
     "password": "1234"
+=======
+>>>>>>> 08225314eae312a1aeabd106fea67440a3b32b46
   }
 ]
