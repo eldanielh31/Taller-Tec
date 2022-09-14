@@ -23,12 +23,7 @@ export class BackendService {
   }
 
   public postEmploye( user: Object ){
-    let httpheaders = new HttpHeaders()
-      .set('Content-type', 'application/Json');
-    let options = {
-      headers: httpheaders
-    };
-    return this.httpClient.post(`${this.url}employees/new`, user, options)
+    return this.httpClient.post(`${this.url}employees/new`, user)
   }
 
   public deleteClient(id: number) {
