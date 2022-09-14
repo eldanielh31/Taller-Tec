@@ -39,6 +39,9 @@
     </div>
     <div class="col-xl-8 order-xl-1">
       <div class="card bg-secondary shadow">
+        <div *ngIf="isSuccess" class="alert alert-success" role="alert">
+          User updated success!
+        </div>
         <div class="card-header bg-white border-0">
           <div class="row align-items-center">
             <div class="col-8">

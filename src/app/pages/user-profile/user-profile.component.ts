@@ -9,8 +9,10 @@ import { StorageService } from 'src/app/storage.service';
 })
 export class UserProfileComponent implements OnInit {
 
+  isSuccess: Boolean = false
+
   currentUser : Object = {};
-  isWorker : Boolean = true;
+  isWorker : Boolean;
   identification: String = null;
   password: String = null;
   firstName: String = null;
@@ -25,7 +27,7 @@ export class UserProfileComponent implements OnInit {
   constructor(private localStorage: StorageService, private backend: BackendService) { 
 
     this.currentUser = JSON.parse(this.localStorage.getData('user'));
-    // this.isWorker = this.currentUser['isWorker']
+    this.isWorker = this.currentUser['admin']
 
   }
 
@@ -58,20 +60,23 @@ export class UserProfileComponent implements OnInit {
       delete this.currentUser['admin']
       console.log(this.currentUser)
       this.backend.deleteEmploye(this.currentUser['idNumber']).subscribe(data =>{
-        console.log(data)
+        console.log('eliminado correctamente')
       })
       this.backend.postEmploye(this.currentUser).subscribe(data => {
-        console.log(data)
+        console.log('Posteado correctamente')
       })
     }else{
       delete this.currentUser['admin']
-      this.backend.deleteClient(this.currentUser['idNumber'])
-      this.backend.postClient(this.currentUser)
+      this.backend.deleteClient(this.currentUser['idNumber']).subscribe(data => {
+        console.log('Posteado correctamente')
+      })
+      this.backend.postClient(this.currentUser).subscribe(data => {
+        console.log('Posteado correctamente')
+      })
     }
 
     this.currentUser['admin'] = admin
-
-    window.location.reload()
+    this.isSuccess = true
 
   }
 

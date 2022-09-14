@@ -224,19 +224,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\danya\\.nuget\\packages\\": {}
+    "C:\\Users\\danbg\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\devWS\\Bases\\Tarea Corta 1\\Taller-Tec\\api\\API.csproj",
+      "projectUniqueName": "C:\\Users\\danbg\\Desktop\\tallertec\\Taller-Tec\\API\\API.csproj",
       "projectName": "API",
-      "projectPath": "C:\\devWS\\Bases\\Tarea Corta 1\\Taller-Tec\\api\\API.csproj",
-      "packagesPath": "C:\\Users\\danya\\.nuget\\packages\\",
-      "outputPath": "C:\\devWS\\Bases\\Tarea Corta 1\\Taller-Tec\\api\\obj\\",
+      "projectPath": "C:\\Users\\danbg\\Desktop\\tallertec\\Taller-Tec\\API\\API.csproj",
+      "packagesPath": "C:\\Users\\danbg\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\danbg\\Desktop\\tallertec\\Taller-Tec\\API\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\danya\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\danbg\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
