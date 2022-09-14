@@ -25,7 +25,6 @@ export class LoginComponent implements OnInit, OnDestroy {
     this.backend.getEmploye(this.email).subscribe(
       (data : Object) => {
         data['admin'] = true;
-        console.log(data);
         
         this.localStorage.saveData('user', JSON.stringify(data))
         this.router.navigate(['/dashboard'])
@@ -37,7 +36,6 @@ export class LoginComponent implements OnInit, OnDestroy {
     this.backend.getClient(this.email).subscribe(
       (data: Object) => {
         data['admin'] = false;
-        console.log(data);
         
         this.localStorage.saveData('user', JSON.stringify(data))
         this.router.navigate(['/dashboard'])
