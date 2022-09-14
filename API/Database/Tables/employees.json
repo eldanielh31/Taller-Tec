@@ -1,16 +1,1 @@
-[
-  {
-    "idNumber": 2019043724,
-    "identification":117970894,
-    "name": "Daniel",
-    "lastName": "Z\u00FA\u00F1iga",
-    "cellphoneNumber": 85104014,
-    "age": 21,
-    "role": "engineer",
-    "branch": "Campus Central Cartago",
-    "email": "danyazunigab@gmail.com",
-    "address": "idk",
-    "username": "danyazunigab",
-    "password": "1234"
-  }
-]
+[{"idNumber":2019043724,"identification":117970894,"name":"Daniel","lastName":"Z\u00FA\u00F1iga","cellphoneNumber":85104014,"joiningDate":"2020-2-5T00:00:00","birthDate":"2000-12-15T00:00:00","age":21,"role":"engineer","branch":"Campus Central Cartago","email":"danyazunigab@gmail.com","address":"idk","username":"danyazunigab","password":"1234"},{"idNumber":181866956,"identification":0,"name":"","lastName":"","cellphoneNumber":0,"joiningDate":"1/1/1720 00:00:00","birthDate":"1/1/1720 00:00:00","age":0,"role":"","branch":"","email":"","address":"","username":"","password":""}]

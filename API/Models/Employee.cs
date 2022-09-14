@@ -6,8 +6,8 @@ public class Employee
     public string name{get; set;}
     public string lastName{get; set;}
     public int cellphoneNumber{get; set;}
-    //public DateTime joiningDate {get; set;}
-    //public DateTime birthDate {get; set;}
+    public string joiningDate {get; set;}
+    public string birthDate {get; set;}
     public int age{get; set;}
     public string role{get; set;}
     public string branch{get; set;}
@@ -23,6 +23,8 @@ public class Employee
         this.name = "";
         this.lastName = "";
         this.cellphoneNumber = 0;
+        this.joiningDate = new DateTime(1720,1,1).ToString();
+        this.birthDate = new DateTime(1720,1,1).ToString();
         this.age = 0;
         this.role = "";
         this.branch = "";
