@@ -15,6 +15,7 @@ export class LoginComponent implements OnInit, OnDestroy {
   email: string = ''
   password: string = ''
   isError: boolean = false
+  textError: String;
 
   ngOnInit() {
   }
@@ -26,27 +27,46 @@ export class LoginComponent implements OnInit, OnDestroy {
       (data : Object) => {
         data['admin'] = true;
         
-        this.localStorage.saveData('user', JSON.stringify(data))
-        this.router.navigate(['/dashboard'])
-        return
-      }, (error => {
-        console.log(error['status'])
-      })
-    )
-    this.backend.getClient(this.email).subscribe(
-      (data: Object) => {
-        data['admin'] = false;
+        if(this.password !== data['password']){
+          this.isError = true
+          this.textError = 'Email or password incorrect!'
+          return
+        }
         
         this.localStorage.saveData('user', JSON.stringify(data))
         this.router.navigate(['/dashboard'])
         return
       }, (error => {
-        console.log(error['status'])
+        if (error.status === 404) {
+          this.isError = true
+          this.textError = 'Email or password incorrect!'
+        }
+      })
+    )
+    this.backend.getClient(this.email).subscribe(
+      (data: Object) => {
+        data['admin'] = false;
+
+        if (this.password !== data['password']) {
+          this.isError = true
+          this.textError = 'Email or password incorrect!'
+          return
+        }
+        
+        this.localStorage.saveData('user', JSON.stringify(data))
+        this.router.navigate(['/dashboard'])
+        return
+      }, (error => {
+        if(error.status === 404){
+          this.isError = true
+          this.textError = 'Email or password incorrect!'
+        }
+        
       })
 
     )
 
-    this.isError = true
+    
     
     return
   }

@@ -37,7 +37,7 @@ export class UserProfileComponent implements OnInit {
   handleUpdate(){
 
     let listData = ['identification', 'password', 'name', 'lastName',
-      'dateBirth', 'dateEntered', 'role', 'address', 'phone', 'email']
+      'birthDate', 'dateEntered', 'role', 'address', 'cellphoneNumber', 'email']
     let dataToUpdate = [this.identification ,this.password, this.firstName, this.lastName,
       this.dateBirth, this.dateEntered, this.role, this.address, this.phone, this.email]
     

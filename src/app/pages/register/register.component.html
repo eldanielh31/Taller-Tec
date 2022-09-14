@@ -21,6 +21,12 @@
   <div class="row justify-content-center">
     <div class="col-lg-6 col-md-8">
       <div class="card bg-secondary shadow border-0">
+        <div class="alert alert-danger" *ngIf="isError" role="alert">
+          {{textError}}
+        </div>
+        <div class="alert alert-success" *ngIf="isSuccess" role="alert">
+          Successfully registered user! Check your email and login ;)
+        </div>
         <div class="card-body px-lg-5 py-lg-5">
           <div class="text-center text-muted mb-4">
             <h1>Register</h1>
@@ -74,13 +80,17 @@
                 <input class="form-control" [(ngModel)]="email" placeholder="Email" type="email">
               </div>
             </div>
-            <div class="form-check">
-              <input class="form-check-input" type="checkbox" value="false" id="flexCheckDefault" [(ngModel)]="checkWorker">
-              <label class="form-check-label" for="flexCheckDefault">
-                Worker
-              </label>
-            </div>
 
+
+            
+          </form>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="flexCheckDefault" [(ngModel)]="checkWorker">
+            <label class="form-check-label" for="flexCheckDefault">
+              Worker
+            </label>
+          </div>
+          <form>
             <div class="form-group" *ngIf="checkWorker">
               <div class="input-group input-group-alternative mb-3">
                 <div class="input-group-prepend">
@@ -89,7 +99,7 @@
                 <input class="form-control" [(ngModel)]="password" placeholder="Password" type="password">
               </div>
             </div>
-
+            
             <div class="form-group" *ngIf="checkWorker">
               <div class="input-group input-group-alternative mb-3">
                 <div class="input-group-prepend">
@@ -98,7 +108,7 @@
                 <input class="form-control" [(ngModel)]="entered" placeholder="Date Entered (DD/MM/YYYY)" type="text">
               </div>
             </div>
-
+            
             <div class="form-group" *ngIf="checkWorker">
               <div class="input-group input-group-alternative mb-3">
                 <div class="input-group-prepend">
@@ -107,7 +117,7 @@
                 <input class="form-control" [(ngModel)]="birth" placeholder="Date of Birth (DD/MM/YYYY)" type="text">
               </div>
             </div>
-
+            
             <div class="form-group" *ngIf="checkWorker">
               <div class="input-group input-group-alternative mb-3">
                 <div class="input-group-prepend">
@@ -116,7 +126,7 @@
                 <input class="form-control" [(ngModel)]="role" placeholder="Role in the Company" type="text">
               </div>
             </div>
-
+            
             <div class="text-center">
               <button type="button" class="btn btn-primary mt-4" (click)="handleRegister()">Create account</button>
             </div>
