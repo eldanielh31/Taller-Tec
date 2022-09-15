@@ -34,4 +34,8 @@ export class BackendService {
     return this.httpClient.post(`${this.url}clients/new`, user)
   }
 
+  public getAppointments(user: Object) {
+    return this.httpClient.post(`${this.url}appointments`, user)
+  }
+
 }

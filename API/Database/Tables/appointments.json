@@ -1,3 +1,33 @@
 [
+    {
+        "clientName": "Jon Smith",
+        "plate": 11111,
+        "store": "San Jose",
+        "service": "Checkup"
+      },
+      {
+        "clientName": "Joana Perez",
+        "plate": 22222,
+        "store": "Cartago",
+        "service": "Maintenance"
+      },
+      {
+        "clientName": "Linda Torres",
+        "plate": 34343,
+        "store": "San Jose",
+        "service": "Checkup"
+      },
+      {
+        "clientName": "Ron Martinez",
+        "plate": 12343,
+        "store": "Alajuela",
+        "service": "Maintenance"
+      },
+      {
+        "clientName": "Pedro Flores",
+        "plate": 988765,
+        "store": "Heredia",
+        "service": "Checkup"
+      }
     
 ]

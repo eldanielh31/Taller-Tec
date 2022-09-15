@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\danbg\\Desktop\\tallertec\\Taller-Tec\\API\\API.csproj": {}
+    "C:\\Users\\spark\\Desktop\\Progras\\Taller-Tec\\API\\API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\danbg\\Desktop\\tallertec\\Taller-Tec\\API\\API.csproj": {
+    "C:\\Users\\spark\\Desktop\\Progras\\Taller-Tec\\API\\API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\danbg\\Desktop\\tallertec\\Taller-Tec\\API\\API.csproj",
+        "projectUniqueName": "C:\\Users\\spark\\Desktop\\Progras\\Taller-Tec\\API\\API.csproj",
         "projectName": "API",
-        "projectPath": "C:\\Users\\danbg\\Desktop\\tallertec\\Taller-Tec\\API\\API.csproj",
-        "packagesPath": "C:\\Users\\danbg\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\danbg\\Desktop\\tallertec\\Taller-Tec\\API\\obj\\",
+        "projectPath": "C:\\Users\\spark\\Desktop\\Progras\\Taller-Tec\\API\\API.csproj",
+        "packagesPath": "C:\\Users\\spark\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\spark\\Desktop\\Progras\\Taller-Tec\\API\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\danbg\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\spark\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
@@ -62,7 +62,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     }
