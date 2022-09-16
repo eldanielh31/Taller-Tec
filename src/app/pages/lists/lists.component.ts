@@ -1,51 +1,40 @@
 import { Component, OnInit } from '@angular/core';
-import workerData from 'API/Database/Tables/employees.json';
+import { Router } from '@angular/router';
+import { Observable } from 'rxjs';
+import { BackendService } from 'src/app/backend.service';
+import { StorageService } from 'src/app/storage.service';
+// import appointmentData from 'API/Database/Tables/appointments.json'
 
-interface Worker{
-  idNumber: Number;
-  identification: Number;
-  name: String,
-  lastName: String;
-  cellphoneNumber: Number;
-  joiningDate: String;
-  birthDate: String;
-  age: Number;
-  role: String;
-  branch: String;
-  email: String;
-  address: String;
-  username: String;
-  password: String;
+interface Appointment {
+  idAppointment: number,
+  idService: number,
+  idClient: number,
+  clientName: string,
+  clientLastName: string,
+  idEmployee: number,
+  employeeName: string,
+  employeeLastName: string
 }
 
 @Component({
   selector: 'app-lists',
   templateUrl: './lists.component.html',
-  styleUrls: ['./lists.component.css']
+  styleUrls: ['./lists.component.scss']
 })
-
-
-
 export class ListsComponent implements OnInit {
-  data: Array<any>;
-  constructor() { 
-    this.data = [
-      { firstName: 'John', lastName: 'Doe', age: '35' },
-      { firstName: 'Michael', lastName: 'Smith', age: '39' },
-      { firstName: 'Michael', lastName: 'Jordan', age: '45' },
-      { firstName: 'Tanya', lastName: 'Blake', age: '47' }
-  ];
+
+  appointments: Appointment[];
+  currentUser: Object = {};
+
+  constructor(private router: Router, private localStorage: StorageService, private backend: BackendService) {
     
   }
 
-  ngOnInit(): void {
+  ngOnInit() {
+
   }
 
-  
-  workers: Worker[] = workerData; 
-  handleclick(){
-    
+  handleclick() {
+    this.router.navigate(['/appointments'])
   }
-
-  
 }
