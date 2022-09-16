@@ -36,7 +36,7 @@ public class AppointmentController : ControllerBase{
     [EnableCors]
     public ActionResult Get(string searchBy, int id)
     {
-        var a = TallerDB.GetInstance().GetAppointment(searchBy,id);
+        var a = TallerDB.GetInstance().GetAppointments(searchBy,id).ToArray();
         if(a != null)
             return Ok(a);
         return NotFound();
@@ -46,7 +46,9 @@ public class AppointmentController : ControllerBase{
     [EnableCors]
     public ActionResult Post([FromBody] Appointment newAppointment)
     {
-        newAppointment.setId(TallerDB.GetInstance().GetAppointmentsSize());
+        if(TallerDB.GetInstance().FindAppointmentById(newAppointment.idAppointment) != null)
+            return NoContent();
+        //newAppointment.setId(TallerDB.GetInstance().GetAppointmentsSize());
         TallerDB.GetInstance().addAppointment(newAppointment);
         return Ok();
     }
