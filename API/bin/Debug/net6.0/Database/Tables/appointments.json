@@ -1,3 +1,26 @@
 [
-     
+  {
+    "idAppointment": 0,
+    "service": "Chequeo",
+    "store": "idk",
+    "plate": 0,
+    "idClient": 0,
+    "clientName": "Daniel",
+    "clientLastName": "Lmao",
+    "idEmployee": 2345,
+    "employeeName": "Daniel",
+    "employeeLastName": "lmao"
+  },
+  {
+    "idAppointment": 1,
+    "service": "Chequeo",
+    "store": "idk",
+    "plate": 1,
+    "idClient": 0,
+    "clientName": "Daniel",
+    "clientLastName": "Lmao",
+    "idEmployee": 2019043724,
+    "employeeName": "Daniel",
+    "employeeLastName": "lmao"
+  }
 ]
