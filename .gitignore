@@ -6,6 +6,8 @@
 /out-tsc
 /.angular
 /.bin
+/API/bin
+/API/obj
 
 # dependencies
 /node_modules
