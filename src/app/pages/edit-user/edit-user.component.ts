@@ -34,6 +34,7 @@ export class EditUserComponent implements OnInit {
     if (userTypeFromRoute === 'client') {
       this.backend.getClientById(userIdFromRoute).subscribe(
         response => {
+          response['admin'] = false
           this.localStorage.saveData('userTemp', JSON.stringify(response))
         }
       )
@@ -41,6 +42,7 @@ export class EditUserComponent implements OnInit {
     else if (userTypeFromRoute === 'worker') {
       this.backend.getEmployeById(userIdFromRoute).subscribe(
         response => {
+          response['admin'] = true
           this.localStorage.saveData('userTemp', JSON.stringify(response))
         }
       )
