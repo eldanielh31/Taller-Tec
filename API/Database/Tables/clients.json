@@ -31,5 +31,16 @@
     "location": "",
     "username": "",
     "password": "33102"
+  },
+  {
+    "idNumber": 0,
+    "name": "Andr\u00E9s",
+    "lastName": "Esquivel",
+    "secondLastName": "",
+    "cellphoneNumber": 44444444,
+    "email": "andrew@tallertecpruebas.com",
+    "location": "",
+    "username": "",
+    "password": "18337"
   }
 ]

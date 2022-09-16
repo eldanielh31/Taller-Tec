@@ -20,5 +20,16 @@
     "location": "",
     "username": "",
     "password": ""
+  },
+  {
+    "idNumber": 0,
+    "name": "Daniela",
+    "lastName": "Morera",
+    "secondLastName": "",
+    "cellphoneNumber": 5555555,
+    "email": "daniela@pruebastallertec.com",
+    "location": "",
+    "username": "",
+    "password": "33102"
   }
 ]

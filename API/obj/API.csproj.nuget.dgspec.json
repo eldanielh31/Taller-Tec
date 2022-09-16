@@ -1,22 +1,6 @@
 {
   "format": 1,
   "restore": {
-<<<<<<< Updated upstream
-    "C:\\Users\\spark\\Desktop\\Progras\\Taller-Tec\\API\\API.csproj": {}
-  },
-  "projects": {
-    "C:\\Users\\spark\\Desktop\\Progras\\Taller-Tec\\API\\API.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "C:\\Users\\spark\\Desktop\\Progras\\Taller-Tec\\API\\API.csproj",
-        "projectName": "API",
-        "projectPath": "C:\\Users\\spark\\Desktop\\Progras\\Taller-Tec\\API\\API.csproj",
-        "packagesPath": "C:\\Users\\spark\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\spark\\Desktop\\Progras\\Taller-Tec\\API\\obj\\",
-        "projectStyle": "PackageReference",
-        "configFilePaths": [
-          "C:\\Users\\spark\\AppData\\Roaming\\NuGet\\NuGet.Config"
-=======
     "C:\\devWS\\Bases\\Taller-Tec\\API\\API.csproj": {}
   },
   "projects": {
@@ -31,7 +15,6 @@
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\danya\\AppData\\Roaming\\NuGet\\NuGet.Config"
->>>>>>> Stashed changes
         ],
         "originalTargetFrameworks": [
           "net6.0"
@@ -87,7 +70,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     }

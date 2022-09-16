@@ -448,25 +448,11 @@
     ]
   },
   "packageFolders": {
-<<<<<<< Updated upstream
-    "C:\\Users\\spark\\.nuget\\packages\\": {}
-=======
     "C:\\Users\\danya\\.nuget\\packages\\": {}
->>>>>>> Stashed changes
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-<<<<<<< Updated upstream
-      "projectUniqueName": "C:\\Users\\spark\\Desktop\\Progras\\Taller-Tec\\API\\API.csproj",
-      "projectName": "API",
-      "projectPath": "C:\\Users\\spark\\Desktop\\Progras\\Taller-Tec\\API\\API.csproj",
-      "packagesPath": "C:\\Users\\spark\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\spark\\Desktop\\Progras\\Taller-Tec\\API\\obj\\",
-      "projectStyle": "PackageReference",
-      "configFilePaths": [
-        "C:\\Users\\spark\\AppData\\Roaming\\NuGet\\NuGet.Config"
-=======
       "projectUniqueName": "C:\\devWS\\Bases\\Taller-Tec\\API\\API.csproj",
       "projectName": "API",
       "projectPath": "C:\\devWS\\Bases\\Taller-Tec\\API\\API.csproj",
@@ -475,7 +461,6 @@
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\danya\\AppData\\Roaming\\NuGet\\NuGet.Config"
->>>>>>> Stashed changes
       ],
       "originalTargetFrameworks": [
         "net6.0"
@@ -531,8 +516,16 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problema al leer el archivo de caché C:\\devWS\\Bases\\Taller-Tec\\API\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }
