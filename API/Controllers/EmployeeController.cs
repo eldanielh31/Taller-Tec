@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 using API.Models;
 using API.Database;
 using Microsoft.AspNetCore.Cors;
+using API.Email;
 
 namespace API.Controllers;
 
@@ -10,8 +11,10 @@ namespace API.Controllers;
 
 public class EmployeeController : ControllerBase{
     private readonly ILogger<EmployeeController> _logger;
-    public EmployeeController(ILogger<EmployeeController> logger)
+    private readonly IEmailSender _emailSender;
+    public EmployeeController(ILogger<EmployeeController> logger, IEmailSender emailSender)
     {
+        _emailSender = emailSender;
         _logger = logger;
     }
 
@@ -62,9 +65,11 @@ public class EmployeeController : ControllerBase{
     [EnableCors]
     public ActionResult Post([FromBody] Employee e)
     {
+        //Añade el empleado
         if(TallerDB.GetInstance().FindEmployeeById(e.idNumber) != null)
             return NoContent();
         TallerDB.GetInstance().addEmployee(e);
+        
         return Ok(e);
     }
     

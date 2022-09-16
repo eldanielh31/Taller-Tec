@@ -7,13 +7,17 @@
 </div>
 <!-- Page content -->
 <div class="container-fluid mt--7">
+  <div class="text-right">
+    <button type="button"  class="btn btn-warning mt-4" (click)="handleclick()">New appointment</button>
+  </div>
   <!-- Table -->
   <div class="row">
     <div class="col">
       <div class="card shadow">
         <div class="card-header border-0">
-          <h3 class="mb-0">Scheduled appointments</h3>
+          <h3 class="mb-0">Scheduled appointments</h3> 
         </div>
+        
         <div class="table-responsive">
           <table class="table align-items-center table-flush">
             <thead class="thead-light">
@@ -64,7 +68,5 @@
       </div>
     </div>
   </div>
-  <div class="text-center">
-    <button type="button"  class="btn btn-primary mt-4" (click)="handleclick()">New appointment</button>
-  </div>
+
  
