@@ -19,25 +19,21 @@
             <table class="table align-items-center table-flush">
               <thead class="thead-light">
                 <tr>
-                  <th data-field="name">
-                      <span class="text-success">
+                  <th>
                         ID
-                      </span>
                     </th>
-                  <th scope="col">Name</th>
+                  <th scope="col">
+                        Name
+                  </th>
                 </tr>
               </thead>
               <tbody>
-                <tr>
-                  <th scope="row">
-                    <div class="media align-items-center">
-                      <div class="media-body">
-                        <span class="mb-0 text-sm">12345</span>
-                      </div>
-                    </div>
-                  </th>
+                <tr *ngFor="let people of people.data">
                   <td>
-                    Jon
+                    {{people.firstName}}
+                  </td>
+                  <td>
+                    {{people.lastName}}
                   </td>
                   <td class="text-right">
                     <div class="text-left">
