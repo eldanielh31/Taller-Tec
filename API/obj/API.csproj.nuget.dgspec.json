@@ -1,6 +1,7 @@
 {
   "format": 1,
   "restore": {
+<<<<<<< Updated upstream
     "C:\\Users\\spark\\Desktop\\Progras\\Taller-Tec\\API\\API.csproj": {}
   },
   "projects": {
@@ -15,6 +16,22 @@
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\spark\\AppData\\Roaming\\NuGet\\NuGet.Config"
+=======
+    "C:\\devWS\\Bases\\Taller-Tec\\API\\API.csproj": {}
+  },
+  "projects": {
+    "C:\\devWS\\Bases\\Taller-Tec\\API\\API.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\devWS\\Bases\\Taller-Tec\\API\\API.csproj",
+        "projectName": "API",
+        "projectPath": "C:\\devWS\\Bases\\Taller-Tec\\API\\API.csproj",
+        "packagesPath": "C:\\Users\\danya\\.nuget\\packages\\",
+        "outputPath": "C:\\devWS\\Bases\\Taller-Tec\\API\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\danya\\AppData\\Roaming\\NuGet\\NuGet.Config"
+>>>>>>> Stashed changes
         ],
         "originalTargetFrameworks": [
           "net6.0"
@@ -38,6 +55,14 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "Mailkit": {
+              "target": "Package",
+              "version": "[3.4.1, )"
+            },
+            "Mimekit": {
+              "target": "Package",
+              "version": "[3.4.1, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.2.3, )"

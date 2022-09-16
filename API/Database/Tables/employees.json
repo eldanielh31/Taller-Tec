@@ -30,5 +30,37 @@
     "address": "idk",
     "username": "danyazunigab",
     "password": "1234"
+  },
+  {
+    "idNumber": 139,
+    "identification": 2177,
+    "name": "Fer",
+    "lastName": "Gomez",
+    "cellphoneNumber": 64563,
+    "joiningDate": "1/1/1720 12:00:00 AM",
+    "birthDate": "1/1/1720 12:00:00 AM",
+    "age": 23,
+    "role": "Pintor",
+    "branch": "Campus Central Cartago",
+    "email": "testemailg@tallertec.com",
+    "address": "idk",
+    "username": "danyazunigab",
+    "password": "28412"
+  },
+  {
+    "idNumber": 0,
+    "identification": 222222222,
+    "name": "Lucas",
+    "lastName": "Trotacielos",
+    "cellphoneNumber": 55555555,
+    "joiningDate": "2/9/1970",
+    "birthDate": "mecanico",
+    "age": 0,
+    "role": "",
+    "branch": "",
+    "email": "lucastrotacielos@starwars.com",
+    "address": "Tatooine",
+    "username": "",
+    "password": "71124"
   }
 ]

@@ -8,9 +8,17 @@ build_property.PlatformNeutralAssembly =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = API
 build_property.RootNamespace = API
+<<<<<<< Updated upstream
 build_property.ProjectDir = C:\Users\spark\Desktop\Progras\Taller-Tec\API\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
 build_property.MSBuildProjectDirectory = C:\Users\spark\Desktop\Progras\Taller-Tec\API
+=======
+build_property.ProjectDir = C:\devWS\Bases\Taller-Tec\API\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\devWS\Bases\Taller-Tec\API
+>>>>>>> Stashed changes
 build_property._RazorSourceGeneratorDebug = 
