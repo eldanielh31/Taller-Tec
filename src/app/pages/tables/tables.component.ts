@@ -1,9 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Observable } from 'rxjs';
 import { BackendService } from 'src/app/backend.service';
 import { StorageService } from 'src/app/storage.service';
-// import appointmentData from 'API/Database/Tables/appointments.json'
 
 interface Appointment {
   idAppointment: number,

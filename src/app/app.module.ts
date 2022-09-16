@@ -15,6 +15,7 @@ import { AppRoutingModule } from './app.routing';
 import { ComponentsModule } from './components/components.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { EditUserComponent } from './pages/edit-user/edit-user.component';
+import { ListUsersComponent } from './pages/list-users/list-users.component';
 
 
 @NgModule({
@@ -28,14 +29,14 @@ import { EditUserComponent } from './pages/edit-user/edit-user.component';
     NgbModule,
     RouterModule,
     AppRoutingModule,
-    HttpClientModule
-
+    HttpClientModule,
   ],
   declarations: [
     AppComponent,
     AdminLayoutComponent,
     AuthLayoutComponent,
-    EditUserComponent
+    EditUserComponent,
+    ListUsersComponent
   ],
   providers: [],
   bootstrap: [AppComponent]
