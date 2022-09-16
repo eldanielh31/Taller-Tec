@@ -14,6 +14,7 @@ export class BackendService {
   public getEmploye( email: String ){
     return this.httpClient.get(`${this.url}employees/email/${email}/`)
   }
+
   public getClient(email: String) {
     return this.httpClient.get(`${this.url}clients/email/${email}/`)
   }
@@ -34,8 +35,16 @@ export class BackendService {
     return this.httpClient.post(`${this.url}clients/new`, user)
   }
 
-  public getAppointments(user: Object) {
-    return this.httpClient.post(`${this.url}appointments`, user)
+  public getAppointments() {
+    return this.httpClient.get<any>(`${this.url}appointments`)
+  }
+
+  public getAppointmentsByIdUser(idUser: number) {
+    return this.httpClient.get(`${this.url}appointments/client/${idUser}`)
+  }
+
+  public getAppointmentsByIdWorker(idWorker: number) {
+    return this.httpClient.get(`${this.url}appointments/${idWorker}`)
   }
 
 }

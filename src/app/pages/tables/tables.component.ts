@@ -1,10 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { Observable } from 'rxjs';
 import { BackendService } from 'src/app/backend.service';
 import { StorageService } from 'src/app/storage.service';
-import appointmentData from 'API/Database/Tables/appointments.json'
+// import appointmentData from 'API/Database/Tables/appointments.json'
 
-interface Appointment{
+interface Appointment {
   clientName: String;
   plate: Number;
   store: String;
@@ -18,15 +19,36 @@ interface Appointment{
 })
 export class TablesComponent implements OnInit {
 
-  constructor(private router: Router, private localStorage: StorageService, private backend: BackendService) { }
+  appointments: Appointment[];
+  currentUser: Object = {};
+
+  constructor(private router: Router, private localStorage: StorageService, private backend: BackendService) {
+    this.currentUser = JSON.parse(this.localStorage.getData('user'));
+
+    if (this.currentUser['admin']) {
+      this.backend.getAppointmentsByIdWorker(this.currentUser['idNumber']).subscribe(
+        response => {
+          this.localStorage.saveData('appoiments', JSON.stringify(response))
+        }
+      )
+    }
+    else {
+      this.backend.getAppointmentsByIdUser(this.currentUser['idNumber']).subscribe(
+        response => {
+          this.localStorage.saveData('appoiments', JSON.stringify(response))
+        }
+      )
+    }
+
+    this.appointments = (JSON.parse(this.localStorage.getData('appoiments')))
+
+  }
 
   ngOnInit() {
 
   }
-  
-  handleclick(){
+
+  handleclick() {
     this.router.navigate(['/appointments'])
   }
-
-  appointments:Appointment[]=appointmentData;
 }
