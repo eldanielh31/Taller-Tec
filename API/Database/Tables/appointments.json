@@ -3,18 +3,21 @@
         "clientName": "Jon Smith",
         "plate": 11111,
         "store": "San Jose",
+        "idEmployee": 2345,
         "service": "Checkup"
       },
       {
         "clientName": "Joana Perez",
         "plate": 22222,
         "store": "Cartago",
+        "idEmployee": 2345,
         "service": "Maintenance"
       },
       {
         "clientName": "Linda Torres",
         "plate": 34343,
         "store": "San Jose",
+        "idEmployee": 2345,
         "service": "Checkup"
       },
       {

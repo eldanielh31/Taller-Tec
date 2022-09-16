@@ -44,7 +44,7 @@ export class BackendService {
   }
 
   public getAppointmentsByIdWorker(idWorker: number) {
-    return this.httpClient.get(`${this.url}appointments/${idWorker}`)
+    return this.httpClient.get(`${this.url}appointments/employee/${idWorker}`)
   }
 
 }

@@ -6,10 +6,14 @@ import { StorageService } from 'src/app/storage.service';
 // import appointmentData from 'API/Database/Tables/appointments.json'
 
 interface Appointment {
-  clientName: String;
-  plate: Number;
-  store: String;
-  service: String;
+  idAppointment: number,
+  idService: number,
+  idClient: number,
+  clientName: string,
+  clientLastName: string,
+  idEmployee: number,
+  employeeName: string,
+  employeeLastName: string
 }
 
 @Component({
