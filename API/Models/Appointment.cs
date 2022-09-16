@@ -3,7 +3,9 @@ namespace API.Models;
 public class Appointment
 {
     public int idAppointment{get;set;}
-    public string idService{get;set;}
+    public string service{get;set;}
+    public string store{get;set;}
+    public int plate{get;set;}
     public int idClient{get;set;}
     public string clientName{get;set;}
     public string clientLastName{get;set;}

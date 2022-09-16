@@ -84,18 +84,25 @@ namespace API.Database{
         {
             return clients.FirstOrDefault(c => c.email.Equals(email));
         }
-        public Appointment GetAppointment(string type,int id)
+        public List<Appointment> GetAppointments(string type,int id)
         {
-            switch(type)
+            List<Appointment> res = new List<Appointment>();
+            foreach(Appointment a in apps)
             {
-                case ("a" or "appointment"):
-                    return apps.FirstOrDefault(c => c.idAppointment.Equals(id));
-                case ("e" or "employee"):
-                    return apps.FirstOrDefault(c => c.idEmployee.Equals(id));
-                case ("c" or "client"):
-                    return apps.FirstOrDefault(c => c.idClient.Equals(id));
+                switch(type)
+                {
+                    case ("a" or "appointment"):
+                        if(a.idAppointment.Equals(id)) res.Add(a);
+                        break;
+                    case ("e" or "employee"):
+                        if(a.idEmployee.Equals(id)) res.Add(a);
+                        break;
+                    case ("c" or "client"):
+                        if(a.idClient.Equals(id)) res.Add(a);
+                        break;
+                }
             }
-            return null;
+            return res;
         }
 
         //Getters (multiple)

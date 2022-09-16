@@ -14,9 +14,16 @@ export class BackendService {
   public getEmploye( email: String ){
     return this.httpClient.get(`${this.url}employees/email/${email}/`)
   }
+  public getEmployeById(id: number) {
+    return this.httpClient.get(`${this.url}employees/id/${id}/`)
+  }
 
   public getClient(email: String) {
     return this.httpClient.get(`${this.url}clients/email/${email}/`)
+  }
+
+  public getClientById(id: number) {
+    return this.httpClient.get(`${this.url}clients/id/${id}/`)
   }
 
   public deleteEmploye( id : number ){

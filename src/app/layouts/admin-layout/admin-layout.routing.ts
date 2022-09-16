@@ -6,11 +6,13 @@ import { UserProfileComponent } from '../../pages/user-profile/user-profile.comp
 import { TablesComponent } from '../../pages/tables/tables.component';
 import { AuthGuardService } from 'src/app/auth/auth-guard.service';
 import { ListsComponent } from 'src/app/pages/lists/lists.component';
+import { EditUserComponent } from 'src/app/pages/edit-user/edit-user.component';
 
 export const AdminLayoutRoutes: Routes = [
     { path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuardService]},
     { path: 'user-profile', component: UserProfileComponent, canActivate: [AuthGuardService] },
     { path: 'tables', component: TablesComponent, canActivate: [AuthGuardService] },
     { path: 'appointments', component: MapsComponent, canActivate: [AuthGuardService] },
-    { path: 'lists', component: ListsComponent, canActivate: [AuthGuardService] }
+    { path: 'lists', component: ListsComponent, canActivate: [AuthGuardService] },
+    { path: 'user/:userType/:userId', component: EditUserComponent, canActivate: [AuthGuardService] },
 ];
