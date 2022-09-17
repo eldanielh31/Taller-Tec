@@ -2,45 +2,23 @@
   {
     "idNumber": 0,
     "name": "Fabian",
-    "lastName": "b",
-    "secondLastName": "",
-    "cellphoneNumber": 1,
-    "email": "da@gmail.com",
-    "location": "",
-    "username": "",
+    "lastName": "Gómez",
+    "secondLastName": "Barboza",
+    "cellphoneNumber": 87542309,
+    "email": "fabian@gmail.com",
+    "location": "Cartago",
+    "username": "fabi1",
     "password": "1234"
   },
   {
     "idNumber": 1,
-    "name": "asd",
-    "lastName": "asd",
-    "secondLastName": "",
-    "cellphoneNumber": 23,
-    "email": "dan1@gmail.com",
-    "location": "",
-    "username": "",
-    "password": ""
-  },
-  {
-    "idNumber": 0,
-    "name": "Daniela",
-    "lastName": "Morera",
-    "secondLastName": "",
-    "cellphoneNumber": 5555555,
-    "email": "daniela@pruebastallertec.com",
-    "location": "",
-    "username": "",
-    "password": "33102"
-  },
-  {
-    "idNumber": 0,
-    "name": "Andr\u00E9s",
-    "lastName": "Esquivel",
-    "secondLastName": "",
-    "cellphoneNumber": 44444444,
-    "email": "andrew@tallertecpruebas.com",
-    "location": "",
-    "username": "",
-    "password": "18337"
+    "name": "Kevin",
+    "lastName": "Figueres",
+    "secondLastName": "Ferrer",
+    "cellphoneNumber": 67541093,
+    "email": "kev@gmail.com",
+    "location": "San José",
+    "username": "ken1",
+    "password": "1234"
   }
 ]
