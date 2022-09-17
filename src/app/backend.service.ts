@@ -11,6 +11,12 @@ export class BackendService {
   constructor(private httpClient: HttpClient) {
   }
 
+  public getEmployes() {
+    return this.httpClient.get(`${this.url}employees`)
+  }
+  public getClients() {
+    return this.httpClient.get(`${this.url}clients`)
+  }
   public getEmploye( email: String ){
     return this.httpClient.get(`${this.url}employees/email/${email}/`)
   }

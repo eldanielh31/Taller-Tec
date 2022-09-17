@@ -1,10 +1,13 @@
 import { Component, OnInit } from '@angular/core';
-import { CommonModule } from "@angular/common";
-
+import { ActivatedRoute, Router } from '@angular/router';
+import { BackendService } from 'src/app/backend.service';
+import { StorageService } from 'src/app/storage.service';
 
 interface User {
+  idNumber: number,
   identification: number,
-  name: string
+  name: string,
+  lastName: string
 }
 
 @Component({
@@ -14,20 +17,44 @@ interface User {
 })
 export class ListUsersComponent implements OnInit {
 
-  users:User[];
+  users:User[] = [];
+  userType: string;
 
-  constructor() {
-
-    this.users = [
-      {
-        identification : 2213,
-        name : 'DaniGames'
-      }
-    ]
+  constructor(private backend: BackendService, private route: ActivatedRoute, private router: Router, private localStorage: StorageService) {
 
    }
 
   ngOnInit(): void {
+
+    let routeParams = this.route.snapshot.paramMap;
+    this.userType = String(routeParams.get('userType'));
+
+    if (this.userType === 'clients') {
+      this.backend.getClients().subscribe(
+        response => {
+          this.localStorage.saveData('users', JSON.stringify(response))
+        }
+      )
+    }
+    else if (this.userType === 'workers') {
+      this.backend.getEmployes().subscribe(
+        response => {
+          this.localStorage.saveData('users', JSON.stringify(response))
+        }
+      )
+    }
+
+    this.users = JSON.parse(this.localStorage.getData('users'))
+
+  }
+
+  handleEdit( id : number){
+    if(this.userType === 'clients'){
+      this.router.navigate([`/user/client/${id}`])
+    }
+    else if (this.userType === 'workers') {
+      this.router.navigate([`/user/worker/${id}`])
+    }
   }
 
 }

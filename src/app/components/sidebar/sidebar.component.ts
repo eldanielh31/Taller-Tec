@@ -16,6 +16,12 @@ export const ROUTES: RouteInfo[] = [
     { path: '/users/workers', title: 'Workers lists', icon: 'ni-bullet-list-67 text-red', class: '' }
 ];
 
+export const NORMALROUTES: RouteInfo[] = [
+  { path: '/dashboard', title: 'Dashboard', icon: 'ni-tv-2 text-primary', class: '' },
+  { path: '/tables', title: 'Appointments', icon: 'ni-calendar-grid-58 text-green', class: '' },
+  { path: '/user-profile', title: 'User profile', icon: 'ni-single-02 text-yellow', class: '' },
+];
+
 @Component({
   selector: 'app-sidebar',
   templateUrl: './sidebar.component.html',
@@ -25,11 +31,15 @@ export class SidebarComponent implements OnInit {
 
   public menuItems: any[];
   public isCollapsed = true;
+  currentUser: Object = {};
 
   constructor(private localStorage:StorageService, private router: Router) { }
 
   ngOnInit() {
-    this.menuItems = ROUTES.filter(menuItem => menuItem);
+
+    this.currentUser = JSON.parse(this.localStorage.getData('user'));
+
+    this.menuItems = this.currentUser['admin'] ? ROUTES.filter(menuItem => menuItem) : NORMALROUTES.filter(menuItem => menuItem) ;
     this.router.events.subscribe((event) => {
       this.isCollapsed = true;
    });

@@ -1,14 +1,14 @@
 [
   {
     "idNumber": 0,
-    "name": "a",
+    "name": "Fabian",
     "lastName": "b",
     "secondLastName": "",
     "cellphoneNumber": 1,
     "email": "da@gmail.com",
     "location": "",
     "username": "",
-    "password": ""
+    "password": "1234"
   },
   {
     "idNumber": 1,
@@ -31,5 +31,16 @@
     "location": "",
     "username": "",
     "password": "33102"
+  },
+  {
+    "idNumber": 0,
+    "name": "Andr\u00E9s",
+    "lastName": "Esquivel",
+    "secondLastName": "",
+    "cellphoneNumber": 44444444,
+    "email": "andrew@tallertecpruebas.com",
+    "location": "",
+    "username": "",
+    "password": "18337"
   }
 ]

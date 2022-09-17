@@ -448,19 +448,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\danya\\.nuget\\packages\\": {}
+    "C:\\Users\\danbg\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\devWS\\Bases\\Taller-Tec\\API\\API.csproj",
+      "projectUniqueName": "C:\\Users\\danbg\\Desktop\\tallertec\\Taller-Tec\\API\\API.csproj",
       "projectName": "API",
-      "projectPath": "C:\\devWS\\Bases\\Taller-Tec\\API\\API.csproj",
-      "packagesPath": "C:\\Users\\danya\\.nuget\\packages\\",
-      "outputPath": "C:\\devWS\\Bases\\Taller-Tec\\API\\obj\\",
+      "projectPath": "C:\\Users\\danbg\\Desktop\\tallertec\\Taller-Tec\\API\\API.csproj",
+      "packagesPath": "C:\\Users\\danbg\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\danbg\\Desktop\\tallertec\\Taller-Tec\\API\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\danya\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\danbg\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
@@ -519,13 +519,5 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
       }
     }
-  },
-  "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Problema al leer el archivo de caché C:\\devWS\\Bases\\Taller-Tec\\API\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
-    }
-  ]
+  }
 }

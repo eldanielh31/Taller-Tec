@@ -148,3 +148,6 @@ C:\devWS\Bases\Taller-Tec\API\obj\Debug\net6.0\scopedcss\bundle\API.styles.css
 C:\devWS\Bases\Taller-Tec\API\obj\Debug\net6.0\API.csproj.CopyComplete
 C:\devWS\Bases\Taller-Tec\API\obj\Debug\net6.0\API.genruntimeconfig.cache
 C:\devWS\Bases\Taller-Tec\API\obj\Debug\net6.0\ref\API.dll
+C:\Users\danbg\Desktop\tallertec\Taller-Tec\API\bin\Debug\net6.0\MailKit.dll
+C:\Users\danbg\Desktop\tallertec\Taller-Tec\API\bin\Debug\net6.0\MimeKit.dll
+C:\Users\danbg\Desktop\tallertec\Taller-Tec\API\bin\Debug\net6.0\BouncyCastle.Crypto.dll

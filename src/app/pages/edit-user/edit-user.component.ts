@@ -27,6 +27,10 @@ export class EditUserComponent implements OnInit {
 
   constructor(private localStorage: StorageService, private backend: BackendService, private route: ActivatedRoute) {
 
+  }
+
+  ngOnInit() {
+
     let routeParams = this.route.snapshot.paramMap;
     let userIdFromRoute = Number(routeParams.get('userId'));
     let userTypeFromRoute = String(routeParams.get('userType'));
@@ -50,10 +54,6 @@ export class EditUserComponent implements OnInit {
 
     this.currentUser = JSON.parse(this.localStorage.getData('userTemp'));
     this.isWorker = this.currentUser['admin']
-
-  }
-
-  ngOnInit() {
 
   }
 

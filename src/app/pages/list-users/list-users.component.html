@@ -18,22 +18,21 @@
                     <table class="table align-items-center table-flush">
                         <thead class="thead-light">
                             <tr>
-                                <th data-field="name">
-                                    <span class="text-success">
-                                        Client
-                                    </span>
-                                </th>
                                 <th scope="col">Identification</th>
                                 <th scope="col">Name</th>
+                                <th scope="col">Edit</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr *ngFor="let user of users">
                                 <td>
-                                    {{user.plate}}
+                                    {{user.identification}}
                                 </td>
                                 <td>
-                                    {{user.store}}
+                                    {{user.name}} {{user.lastName}}
+                                </td>
+                                <td>
+                                    <button type="button" class="btn btn-info" (click)="handleEdit(user.idNumber)" > Editar </button>
                                 </td>
                             </tr>
                         </tbody>
@@ -42,3 +41,4 @@
             </div>
         </div>
     </div>
+</div>
